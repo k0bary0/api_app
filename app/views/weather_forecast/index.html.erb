@@ -1,0 +1,8 @@
+<h1>APIから取得したデータ</h1>
+
+  <ul>
+    <% @data.each do |item| %>
+      <li><strong>タイトル:</strong> <%= item['title'] %> <br>
+      <strong>内容:</strong> <%= item['body'] %></li>
+    <% end %>
+  </ul>
