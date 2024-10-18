@@ -9,7 +9,7 @@ class WeatherForecastController < ApplicationController
     response = HTTParty.get(url)
 
     if response.success?
-      @data = response.parsed_response # JSONデータをパース
+      @data = response.parsed_response
     else
       Rails.logger.error "APIリクエストに失敗しました: #{response.code}"
     end 
